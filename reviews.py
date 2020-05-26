@@ -12,8 +12,10 @@ headers = {'Authorization': 'bearer %s' % apiKey}
 
 file = pd.read_csv("Businesses_Output.csv", encoding="utf-8")
 
+# 5492, 6909, 7451 Has some unexpected char not encoded in urf-8
+
 # Slicing the dataframe to start at a different index
-file = file[3943:]
+file = file[7750:]
 
 #sets up fields for reviews csv
 fields = ['ID', 'Review']
